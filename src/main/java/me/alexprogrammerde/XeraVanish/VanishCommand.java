@@ -28,7 +28,7 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
 
                     player.sendMessage("You are now unvanished!");
                 } else {
-                    sender.sendMessage("You have no permission to do that!");
+                    sender.sendMessage("Unknown command.");
                 }
             } else {
                 if (player.hasPermission("xeravanish.vanish")) {
@@ -36,11 +36,11 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
 
                     player.sendMessage("You are now vanished!");
                 } else {
-                    sender.sendMessage("You have no permission to do that!");
+                    sender.sendMessage("Unknown command.");
                 }
             }
         } else {
-            sender.sendMessage("You need to be a player to do that!");
+            sender.sendMessage("This command does not work in console.");
         }
 
         return false;
