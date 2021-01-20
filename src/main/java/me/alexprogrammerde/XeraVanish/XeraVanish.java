@@ -26,13 +26,13 @@ public class XeraVanish extends JavaPlugin {
         console = getLogger();
         vanishPlayer = new VanishPlayer(this);
 
-        console.info("Loading config.");
+        console.info("[XeraVanish] Loading config.");
         saveDefaultConfig();
 
-        console.info("Registering listeners.");
+        console.info("[XeraVanish] Registering listeners.");
         getServer().getPluginManager().registerEvents(new PlayerEvents(this),this);
 
-        console.info("Registering commands");
+        console.info("[XeraVanish] Registering commands");
         PluginCommand vanish = getServer().getPluginCommand("vanish");
 
         if (vanish != null) {
@@ -40,19 +40,19 @@ public class XeraVanish extends JavaPlugin {
             vanish.setTabCompleter(new VanishCommand(this));
         }
 
-        console.info("Checking for a newer version.");
+        console.info("[XeraVanish] Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
-                console.info("Your up to date!");
+                console.info("[XeraVanish] Your up to date!");
             } else {
-                console.info("There is a new update available. Download it at: https://www.spigotmc.org/resources/80763/updates (You may need to remove the old config to get a never one.)");
+                console.info("[XeraVanish] There is a new update available. Download it at: https://www.spigotmc.org/resources/80763/updates (You may need to remove the old config to get a never one.)");
             }
         });
 
-        console.info("Loading metrics");
+        console.info("[XeraVanish] Loading metrics");
         new Metrics(this, 8622);
 
-        console.info("Finished starting");
+        console.info("[XeraVanish] Finished starting");
     }
 
     public boolean isVanished(Player player) {
