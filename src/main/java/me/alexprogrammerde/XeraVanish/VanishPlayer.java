@@ -22,7 +22,7 @@ public class VanishPlayer {
 
         xeraVanish.taskidlist.put(vanishplayer, Bukkit.getScheduler().scheduleSyncRepeatingTask(xeraVanish, () -> {
             TextComponent actionbar = new TextComponent("You are vanished at the moment!");
-            actionbar.setColor(ChatColor.GOLD);
+            actionbar.setColor(ChatColor.AQUA);
 
             vanishplayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, actionbar);
         }, 0, 20));
