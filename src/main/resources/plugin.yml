@@ -7,7 +7,7 @@ commands:
   vanish:
     description: Command to vanish and unvanish yourself.
     permission: xeravanish.vanish
-    permission-message: You have no permission to do that!
+    permission-message: Unknown command.
 permissions:
   xeravanish.vanish:
     description: Allows you to vanish and unvanish yourself.
