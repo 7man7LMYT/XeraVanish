@@ -1,4 +1,4 @@
-package me.alexprogrammerde.XeraVanish;
+package me.stats.XeraVanish;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ChatMessageType;
