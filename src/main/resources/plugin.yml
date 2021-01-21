@@ -1,13 +1,13 @@
-name: XeraVanish
+name: CustomStats
 version: ${project.version}
-main: me.alexprogrammerde.XeraVanish.XeraVanish
-author: AlexProgrammerDE
-description: A anarchy server oriented vanishing plugin.
+main: me.stats.XeraVanish.XeraVanish
+author: 7man7LMYT
+description: A plugin that adds /stats.
 commands:
-  vanish:
+  stats:
     description: Command to vanish and unvanish yourself.
-    permission: xeravanish.vanish
+    permission: customstats.stats
     permission-message: Unknown command.
 permissions:
-  xeravanish.vanish:
-    description: Allows you to vanish and unvanish yourself.
+  customstats.stats:
+    description: Allows the use of /stats.

@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <modelVersion>4.0.0</modelVersion>
 
-        <groupId>me.alexprogrammerde</groupId>
-        <artifactId>XeraVanish</artifactId>
+        <groupId>me.stats</groupId>
+        <artifactId>CustonStats</artifactId>
         <version>1.1.0</version>
         <packaging>jar</packaging>
 
-        <name>XeraVanish</name>
+        <name>CustomStats</name>
 
-        <description>A anarchy server oriented vanishing plugin.</description>
+        <description>A plugin that adds /stats.</description>
 
         <build>
             <plugins>

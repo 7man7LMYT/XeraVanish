@@ -1,4 +1,4 @@
-package me.alexprogrammerde.XeraVanish;
+package me.stats.XeraVanish;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,18 +23,9 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
             Player player = (Player) sender;
 
             if (xeraVanish.isVanished(player)) {
-                if (player.hasPermission("xeravanish.vanish")) {
-                    xeraVanish.vanishPlayer.unvanishPlayer(player);
+                if (player.hasPermission("customstats.stats")) {
 
-                    player.sendMessage("You are now unvanished!");
-                } else {
-                    sender.sendMessage("Unknown command.");
-                }
-            } else {
-                if (player.hasPermission("xeravanish.vanish")) {
-                    xeraVanish.vanishPlayer.vanishPlayer(player);
-
-                    player.sendMessage("You are now vanished!");
+                    player.sendMessage(xeraVanish.getConfig().getString("statcommand"));
                 } else {
                     sender.sendMessage("Unknown command.");
                 }
