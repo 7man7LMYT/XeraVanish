@@ -26,9 +26,6 @@ public class CustomStats extends JavaPlugin {
         console.info("Loading configuration...");
         saveDefaultConfig();
         console.info("Configuration loaded.");
-        console.info("Registering listeners...");
-        getServer().getPluginManager().registerEvents(new PlayerEvents(this),this);
-        console.info("Listeners registered.");
         console.info("Registering commands...");
         PluginCommand stats = getServer().getPluginCommand("stats");
         console.info("Commands registered.");
