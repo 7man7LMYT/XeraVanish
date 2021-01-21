@@ -5,7 +5,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
             if (customStats.isVanished(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
-                    player.sendMessage("If you see this it worked!");
+                    player.sendMessage( "If you see this it worked!" );
                 } else {
                     sender.sendMessage("Unknown command.");
                 }

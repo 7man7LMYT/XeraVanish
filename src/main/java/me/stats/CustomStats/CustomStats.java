@@ -23,15 +23,16 @@ public class CustomStats extends JavaPlugin {
     public void onEnable() {
         console = getLogger();
 
-        console.info("Loading config.");
+        console.info("Loading configuration...");
         saveDefaultConfig();
-
-        console.info("Registering listeners.");
+        console.info("Configuration loaded.");
+        console.info("Registering listeners...");
         getServer().getPluginManager().registerEvents(new PlayerEvents(this),this);
-
-        console.info("Registering commands");
+        console.info("Listeners registered.");
+        console.info("Registering commands...");
         PluginCommand stats = getServer().getPluginCommand("stats");
-
+        console.info("Commands registered.");
+		
         console.info("Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
@@ -41,5 +42,5 @@ public class CustomStats extends JavaPlugin {
             }
         });
 
-        console.info("Finished starting");
+        console.info("Sucessfully started!");
     }
