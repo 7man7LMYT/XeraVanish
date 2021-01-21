@@ -32,27 +32,14 @@ public class CustomStats extends JavaPlugin {
         console.info("Registering commands");
         PluginCommand stats = getServer().getPluginCommand("stats");
 
-        if (vanish != null) {
-            vanish.setExecutor(new StatsCommand(this));
-            vanish.setTabCompleter(new StatsCommand(this));
-        }
-
         console.info("Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
                 console.info("Your up to date!");
             } else {
-                console.info("There is a new update available. Download it at: https://www.spigotmc.org/resources/80763/updates (You may need to remove the old config to get a never one.)");
+                console.info("There is a new update available. Download it at [redacted].");
             }
         });
 
-        console.info("Loading metrics");
-        new Metrics(this, 8622);
-
         console.info("Finished starting");
     }
-
-    public boolean isVanished(Player player) {
-        return gamemodelist.containsKey(player) && taskidlist.containsKey(player);
-    }
-}
