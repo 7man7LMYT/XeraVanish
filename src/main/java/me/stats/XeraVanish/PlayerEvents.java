@@ -1,4 +1,4 @@
-package me.alexprogrammerde.XeraVanish;
+package me.stats.XeraVanish;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
