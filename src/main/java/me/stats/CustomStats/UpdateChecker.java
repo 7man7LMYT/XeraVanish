@@ -1,4 +1,4 @@
-package me.stats.XeraVanish;
+package me.stats.CustomStats;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

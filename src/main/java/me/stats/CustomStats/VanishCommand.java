@@ -1,4 +1,4 @@
-package me.stats.XeraVanish;
+package me.stats.CustomStats;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VanishCommand implements CommandExecutor, TabExecutor {
-    XeraVanish xeraVanish;
+    CustomStats customStats;
 
-    public VanishCommand(XeraVanish xeraVanish) {
-        this.xeraVanish = xeraVanish;
+    public VanishCommand(CustomStats customStats) {
+        this.customStats = customStats;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            if (xeraVanish.isVanished(player)) {
+            if (customStats.isVanished(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
                     player.sendMessage("Test");

@@ -1,4 +1,4 @@
-package me.stats.XeraVanish;
+package me.stats.CustomStats;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -8,18 +8,18 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerEvents implements Listener {
-    XeraVanish xeravanish;
+    CustomStats customstats;
 
-    public PlayerEvents(XeraVanish xeravanish) {
-        this.xeravanish = xeravanish;
+    public PlayerEvents(CustomStats customstats) {
+        this.customstats = customstats;
     }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
-        for (Player vanishedPlayer : xeravanish.gamemodelist.keySet()) {
-            player.hidePlayer(xeravanish, vanishedPlayer);
+        for (Player vanishedPlayer : customstats.gamemodelist.keySet()) {
+            player.hidePlayer(customstats, vanishedPlayer);
         }
     }
 
@@ -27,10 +27,10 @@ public class PlayerEvents implements Listener {
     public void onQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
-        if (xeravanish.isVanished(player)) {
+        if (customstats.isVanished(player)) {
             event.setQuitMessage(null);
 
-            xeravanish.vanishPlayer.unvanishPlayer(player);
+            customstats.vanishPlayer.unvanishPlayer(player);
         }
     }
 }

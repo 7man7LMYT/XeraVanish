@@ -1,4 +1,4 @@
-package me.stats.XeraVanish;
+package me.stats.CustomStats;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -16,7 +16,7 @@ import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-public class XeraVanish extends JavaPlugin {
+public class CustomStats extends JavaPlugin {
     private Logger console;
     public final HashMap<Player, GameMode> gamemodelist = new HashMap<>();
     public final HashMap<Player, Integer> taskidlist = new HashMap<>();
@@ -26,13 +26,13 @@ public class XeraVanish extends JavaPlugin {
         console = getLogger();
         vanishPlayer = new VanishPlayer(this);
 
-        console.info("[XeraVanish] Loading config.");
+        console.info("Loading config.");
         saveDefaultConfig();
 
-        console.info("[XeraVanish] Registering listeners.");
+        console.info("Registering listeners.");
         getServer().getPluginManager().registerEvents(new PlayerEvents(this),this);
 
-        console.info("[XeraVanish] Registering commands");
+        console.info("Registering commands");
         PluginCommand vanish = getServer().getPluginCommand("vanish");
 
         if (vanish != null) {
@@ -40,19 +40,19 @@ public class XeraVanish extends JavaPlugin {
             vanish.setTabCompleter(new VanishCommand(this));
         }
 
-        console.info("[XeraVanish] Checking for a newer version.");
+        console.info("Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
-                console.info("[XeraVanish] Your up to date!");
+                console.info("Your up to date!");
             } else {
-                console.info("[XeraVanish] There is a new update available. Download it at: https://www.spigotmc.org/resources/80763/updates (You may need to remove the old config to get a never one.)");
+                console.info("There is a new update available. Download it at: https://www.spigotmc.org/resources/80763/updates (You may need to remove the old config to get a never one.)");
             }
         });
 
-        console.info("[XeraVanish] Loading metrics");
+        console.info("Loading metrics");
         new Metrics(this, 8622);
 
-        console.info("[XeraVanish] Finished starting");
+        console.info("Finished starting");
     }
 
     public boolean isVanished(Player player) {

@@ -1,4 +1,4 @@
-package me.stats.XeraVanish;
+package me.stats.CustomStats;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
