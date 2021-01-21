@@ -9,10 +9,10 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VanishCommand implements CommandExecutor, TabExecutor {
+public class StatsCommand implements CommandExecutor, TabExecutor {
     CustomStats customStats;
 
-    public VanishCommand(CustomStats customStats) {
+    public StatsCommand(CustomStats customStats) {
         this.customStats = customStats;
     }
 
