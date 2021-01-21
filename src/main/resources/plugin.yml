@@ -1,6 +1,6 @@
 name: CustomStats
 version: ${project.version}
-main: me.stats.XeraVanish.XeraVanish
+main: me.stats.CustomStats.CustomStats
 author: 7man7LMYT
 description: A plugin that adds /stats.
 commands:
