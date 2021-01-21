@@ -21,7 +21,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            if (customStats.isVanished(player)) {
+            if (customStats.sender(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
                     player.sendMessage( "If you see this it worked!" );
