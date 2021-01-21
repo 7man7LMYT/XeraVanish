@@ -25,7 +25,7 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
             if (xeraVanish.isVanished(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
-                    player.sendMessage("xeraVanish.getConfig().getString(statcommand");
+                    player.sendMessage("Test");
                 } else {
                     sender.sendMessage("Unknown command.");
                 }
