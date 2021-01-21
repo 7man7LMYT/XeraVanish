@@ -25,7 +25,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
             if (customStats.isVanished(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
-                    sender.sendMessage("If you see this it worked!");
+                    player.sendMessage("If you see this it worked!");
                 } else {
                     sender.sendMessage("Unknown command.");
                 }
