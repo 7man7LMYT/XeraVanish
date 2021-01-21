@@ -25,7 +25,7 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
             if (customStats.isVanished(player)) {
                 if (player.hasPermission("customstats.stats")) {
 
-                    player.sendMessage("Test");
+                    sender.sendMessage("If you see this it worked!");
                 } else {
                     sender.sendMessage("Unknown command.");
                 }
