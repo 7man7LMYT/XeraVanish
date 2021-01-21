@@ -28,7 +28,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
                     sender.sendMessage("Unknown command.");
                 }
             }
-        } else {
+        else {
             sender.sendMessage("This command does not work in console.");
         }
 
