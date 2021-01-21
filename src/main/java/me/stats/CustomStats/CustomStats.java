@@ -44,3 +44,4 @@ public class CustomStats extends JavaPlugin {
 
         console.info("Sucessfully started!");
     }
+}
