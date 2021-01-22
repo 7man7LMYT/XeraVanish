@@ -20,12 +20,8 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-
-                if (player.hasPermission("customstats.stats")) {
-
+{
                     player.sendMessage( "If you see this it worked!" );
-                } else {
-                    sender.sendMessage("Unknown command.");
                 }
             }
         else {
