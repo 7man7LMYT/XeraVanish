@@ -19,7 +19,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
-        if (command.getName().equalsIgnoreCase("stats")) {
+        if (command.getName("stats").equalsIgnoreCase("stats")) {
       player.sendMessage( "If you see this it worked!" );
 	} else {
         sender.sendMessage("This command does not work in console ;-;");
