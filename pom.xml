@@ -50,6 +50,10 @@
 				<id>spigotmc-repo</id>
 				<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 			</repository>
+		    <repository>
+			    <id>serverlib</id>
+				<url>https://mvn.intellectualsites.com/content/repositories/thirdparty</url>
+            </repository>
         </repositories>
 
         <dependencies>
@@ -60,4 +64,9 @@
 				<scope>provided</scope>
 			</dependency>
         </dependencies>
+		    <dependency>  
+                <groupId>de.notmyfault</groupId>
+				<artifactId>serverlib</artifactId>
+				<version>1.0.0</version>
+		    </dependency>
 </project>

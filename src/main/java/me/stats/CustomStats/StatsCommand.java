@@ -17,10 +17,12 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
+        public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
-        if (command.getName("stats").equalsIgnoreCase("stats")) {
-      player.sendMessage( "If you see this it worked!" );
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
+{
+                    player.sendMessage( "If you see this it worked!" );
 	} else {
         sender.sendMessage("This command does not work in console ;-;");
            }

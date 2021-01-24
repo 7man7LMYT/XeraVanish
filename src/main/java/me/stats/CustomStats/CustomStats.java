@@ -20,7 +20,7 @@ public class CustomStats extends JavaPlugin {
         console.info("Loading configuration...");
         saveDefaultConfig();
         console.info("Configuration loaded.");
-		
+		ServerLib.checkUnsafeForks();
         console.info("Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
