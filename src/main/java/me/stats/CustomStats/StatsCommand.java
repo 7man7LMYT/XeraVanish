@@ -15,17 +15,15 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
     public StatsCommand(CustomStats customStats) {
         this.customStats = customStats;
     }
-
     @Override
         public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
         if (sender instanceof Player) {
-            Player player = (Player) sender;
-{
-                    player.sendMessage( "If you see this it worked!" );
-	} else {
+            Player player = (Player) sender
+                player.sendMessage( "If you see this it worked!" );
+	    } else {
         sender.sendMessage("This command does not work in console ;-;");
-           }
+               }
 
         return false;
     }
