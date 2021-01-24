@@ -1,4 +1,12 @@
-package me.stats.CustomStats;
+package me.stats.CustomStats; # The plugin.
+package me.notmyfault.serverlib; # The thing that screams at you for using Yatopia
+
+import static me.notmyfault.serverlib.forks.AirplaneLite.isAirplaneLite;
+import static me.notmyfault.serverlib.forks.AirplaneLiteChunkConcurrency.isAirplaneLiteChunkConcurrency;
+import static me.notmyfault.serverlib.forks.Akarin.isAkarin;
+import static me.notmyfault.serverlib.forks.Forge.isForge;
+import static me.notmyfault.serverlib.forks.KibblePatcher.isKibblePatcher;
+import static me.notmyfault.serverlib.forks.Yatopia.isYatopia;
 
 import org.bukkit.GameMode;
 import org.bukkit.command.ConsoleCommandSender;
@@ -9,6 +17,17 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.logging.Logger;
+
+public class ServerLib {
+	public static void checkUnsafeForks() {
+        isAirplaneLite();
+        isAirplaneLiteChunkConcurrency();
+        isAkarin();
+        isForge();
+        isKibblePatcher();
+        isYatopia();
+    }
+}
 
 public class CustomStats extends JavaPlugin {
     private Logger console;
