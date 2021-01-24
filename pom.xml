@@ -63,7 +63,6 @@
 				<version>1.16.2-R0.1-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
-        </dependencies>
 		    <dependency>  
                 <groupId>de.notmyfault</groupId>
 				<artifactId>serverlib</artifactId>
