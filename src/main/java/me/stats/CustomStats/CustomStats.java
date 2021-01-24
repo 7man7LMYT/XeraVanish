@@ -1,5 +1,5 @@
-package me.stats.CustomStats; # The plugin.
-package me.notmyfault.serverlib; # The thing that screams at you for using Yatopia
+package me.stats.CustomStats;
+package me.notmyfault.serverlib;
 
 import static me.notmyfault.serverlib.forks.AirplaneLite.isAirplaneLite;
 import static me.notmyfault.serverlib.forks.AirplaneLiteChunkConcurrency.isAirplaneLiteChunkConcurrency;
