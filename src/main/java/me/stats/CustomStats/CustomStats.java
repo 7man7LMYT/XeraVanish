@@ -1,5 +1,4 @@
 package me.stats.CustomStats;
-package me.notmyfault.serverlib;
 
 import static me.notmyfault.serverlib.forks.AirplaneLite.isAirplaneLite;
 import static me.notmyfault.serverlib.forks.AirplaneLiteChunkConcurrency.isAirplaneLiteChunkConcurrency;
