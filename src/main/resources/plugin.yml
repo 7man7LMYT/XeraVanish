@@ -1,13 +1,11 @@
-name: XeraVanish
+name: CustomStats
 version: ${project.version}
-main: me.alexprogrammerde.XeraVanish.XeraVanish
-author: AlexProgrammerDE
-description: A anarchy server oriented vanishing plugin.
+main: me.stats.CustomStats.CustomStats
+author: 7man7LMYT
+website: https://store.gamersclub.gq
+description: A plugin that adds /stats.
+api-version: 1.13
 commands:
-  vanish:
-    description: Command to vanish and unvanish yourself.
-    permission: xeravanish.vanish
-    permission-message: You have no permission to do that!
-permissions:
-  xeravanish.vanish:
-    description: Allows you to vanish and unvanish yourself.
+  stats:
+    description: Command to give information about the server.
+    aliases: [statistics, serverinfo]

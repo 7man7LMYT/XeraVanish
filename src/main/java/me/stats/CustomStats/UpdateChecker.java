@@ -1,4 +1,4 @@
-package me.alexprogrammerde.XeraVanish;
+package me.stats.CustomStats;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,7 +24,7 @@ public class UpdateChecker {
                 consumer.accept(scanner.next());
             }
         } catch (IOException exception) {
-            this.plugin.getLogger().info("Cannot look for updates: " + exception.getMessage());
+            this.plugin.getLogger().info("Cannot check for updates: " + exception.getMessage());
         }
     }
 }
