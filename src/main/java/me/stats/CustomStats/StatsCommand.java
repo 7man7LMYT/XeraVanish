@@ -20,7 +20,7 @@ public class StatsCommand implements CommandExecutor, TabExecutor {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-                player.sendMessage( "If you see this it worked!" );
+                CommandSender#sendMessage( "If you see this it worked!" );
 	    } else {
         sender.sendMessage("This command does not work in console ;-;");
                }
