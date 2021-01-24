@@ -1,12 +1,5 @@
 package me.stats.CustomStats;
 
-import static me.notmyfault.serverlib.forks.AirplaneLite.isAirplaneLite;
-import static me.notmyfault.serverlib.forks.AirplaneLiteChunkConcurrency.isAirplaneLiteChunkConcurrency;
-import static me.notmyfault.serverlib.forks.Akarin.isAkarin;
-import static me.notmyfault.serverlib.forks.Forge.isForge;
-import static me.notmyfault.serverlib.forks.KibblePatcher.isKibblePatcher;
-import static me.notmyfault.serverlib.forks.Yatopia.isYatopia;
-
 import org.bukkit.GameMode;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
@@ -17,16 +10,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-public class ServerLib {
-	public static void checkUnsafeForks() {
-        isAirplaneLite();
-        isAirplaneLiteChunkConcurrency();
-        isAkarin();
-        isForge();
-        isKibblePatcher();
-        isYatopia();
-    }
-}
 
 public class CustomStats extends JavaPlugin {
     private Logger console;
@@ -38,7 +21,6 @@ public class CustomStats extends JavaPlugin {
         console.info("Loading configuration...");
         saveDefaultConfig();
         console.info("Configuration loaded.");
-		ServerLib.checkUnsafeForks();
         console.info("Checking for a newer version.");
         new UpdateChecker(this, 80763).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
